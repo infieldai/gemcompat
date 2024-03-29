@@ -8,7 +8,7 @@ module Gemcompat
     end
 
     def welcome(package_name:, target_version:)
-      puts "Checking for undocumented incompatibilities with #{package_name} v#{target_version}"
+      puts "Checking for undocumented incompatibilities with #{package_name} v#{target_version}\n\n"
     end
 
     def package_version_to_path_part(version)

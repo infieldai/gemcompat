@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'gemcompat'
+Gemcompat::Runner.new.run!
