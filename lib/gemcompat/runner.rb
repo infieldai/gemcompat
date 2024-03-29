@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'optparse'
 
 module Gemcompat
@@ -14,7 +16,7 @@ module Gemcompat
     def parse_args!(argv = ARGV)
       @options = {}
       OptionParser.new do |opts|
-        opts.banner = "Usage: gemcompat --package rails --version 7.0 --lockfile ~/path/to/Gemfile.lock"
+        opts.banner = 'Usage: gemcompat --package rails --version 7.0 --lockfile ~/path/to/Gemfile.lock'
 
         opts.on('-p', '--package PACKAGE_NAME', 'Package to check compatibility for') do |pkg|
           @options[:package_name] = pkg
@@ -29,21 +31,15 @@ module Gemcompat
         end
       end.parse!(argv)
 
-      unless options.include?(:package_name)
-        fail "Must pass --package"
-      end
+      raise 'Must pass --package' unless options.include?(:package_name)
 
-      unless options.include?(:target_version)
-        fail "Must pass --target-version"
-      end
+      raise 'Must pass --target-version' unless options.include?(:target_version)
 
-      unless options.include?(:lockfile_path)
-        fail "Must pass --lockfile"
-      end
+      raise 'Must pass --lockfile' unless options.include?(:lockfile_path)
 
-      unless lockfile_exists?
-        fail "#{options[:lockfile_path]} does not exist"
-      end
+      return if lockfile_exists?
+
+      raise "#{options[:lockfile_path]} does not exist"
     end
 
     private
@@ -57,4 +53,3 @@ module Gemcompat
     end
   end
 end
-
