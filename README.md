@@ -3,15 +3,15 @@ This project is maintained by the team at https://infield.ai.
 # What this project does
 
 ## TLDR
-Use this script to check whether your app relies on any gems that are
-silently incompatible with a package upgrade you're doing. For
-example, check if you're compatible with Rails 7.1 like this:
+Use this script to check whether your app relies on gems which are
+silently incompatible with a package upgrade. For example, check if
+you're compatible with Rails 7.1 like this:
 
 ```
     gemcompat --package rails --target-version 7.1 --lockfile Gemfile.lock
 ```
 
-## Project overview
+## Motivation
 Upgrading Rails means first upgrading other dependencies that block
 the way. Some of these will have explicit incompatibilities documented
 in their gemspecs. If you try to run `bundle update rails` without
