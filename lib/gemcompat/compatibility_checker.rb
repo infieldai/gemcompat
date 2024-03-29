@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Gemcompat
+  # Check a lockfile for compatibility
   class CompatibilityChecker
     attr_reader :package_incompatibilities, :package_name, :target_version, :found_incompatibilities
 
@@ -18,6 +21,9 @@ module Gemcompat
 
     def incompatibility_datafile(package_name:, target_version:)
       File.open("data/#{package_name}/#{package_version_to_path_part(target_version)}.yaml")
+    rescue Errno::ENOENT
+      puts "#{package_name} v#{target_version} not supported yet"
+      exit(1)
     end
 
     def load_package_data!(package_name:, target_version:)
@@ -29,8 +35,12 @@ module Gemcompat
     def report(found_incompatibilities: @found_incompatibilities)
       welcome(package_name:, target_version:)
 
-      found_incompatibilities.each do |i|
-        puts "#{i[:name]}: Using #{i[:using_version]}. Upgrade to #{i[:required_version]}"
+      if found_incompatibilities.empty?
+        puts "No incompatibilities found"
+      else
+        found_incompatibilities.each do |i|
+          puts "#{i[:name]}: Using #{i[:using_version]}. Upgrade to #{i[:required_version]}"
+        end
       end
     end
 

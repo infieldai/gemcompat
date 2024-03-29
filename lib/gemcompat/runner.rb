@@ -3,6 +3,7 @@
 require 'optparse'
 
 module Gemcompat
+  # This class is the entrypoint for the gem. Initialized from ARGV.
   class Runner
     attr_reader :options
 
@@ -13,6 +14,7 @@ module Gemcompat
       checker.report
     end
 
+    # rubocop:disable Metrics/MethodLength
     def parse_args!(argv = ARGV)
       @options = {}
       OptionParser.new do |opts|
@@ -31,6 +33,13 @@ module Gemcompat
         end
       end.parse!(argv)
 
+      validate_args!
+    end
+    # rubocop:enable Metrics/MethodLength
+
+    private
+
+    def validate_args!
       raise 'Must pass --package' unless options.include?(:package_name)
 
       raise 'Must pass --target-version' unless options.include?(:target_version)
@@ -41,8 +50,6 @@ module Gemcompat
 
       raise "#{options[:lockfile_path]} does not exist"
     end
-
-    private
 
     def lockfile_exists?
       File.exist?(options[:lockfile_path])
