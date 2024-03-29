@@ -1,0 +1,49 @@
+---
+activerecord-import:
+  :first_compatible_version: 1.5.0
+anycable-rails:
+  :first_compatible_version: 1.4.1
+blazer:
+  :first_compatible_version: 3.0.1
+bullet:
+  :first_compatible_version: 7.1.2
+data_migrate:
+  :first_compatible_version: 9.2.0
+database_cleaner-active_record:
+  :first_compatible_version: 2.1.0
+devise:
+  :first_compatible_version: 4.9.3
+formtastic:
+  :first_compatible_version: 5.0.0
+grape:
+  :first_compatible_version: 2.0.0
+has_scope:
+  :first_compatible_version: 0.8.2
+honeybadger:
+  :first_compatible_version: 5.1.0
+lockbox:
+  :first_compatible_version: 1.3.1
+paper_trail:
+  :first_compatible_version: 15.1.0
+public_activity:
+  :first_compatible_version: 3.0.0
+ransack:
+  :first_compatible_version: 4.1.0
+responders:
+  :first_compatible_version: 3.1.1
+rollbar:
+  :first_compatible_version: 3.4.1
+rspec-rails:
+  :first_compatible_version: 6.1.0
+rubocop-rails:
+  :first_compatible_version: 2.22.2
+shoulda-matchers:
+  :first_compatible_version: 6.0.0
+sidekiq:
+  :first_compatible_version: 7.1.5
+simple_form:
+  :first_compatible_version: 5.3.0
+slim:
+  :first_compatible_version: 5.2.0
+web-console:
+  :first_compatible_version: 4.2.1

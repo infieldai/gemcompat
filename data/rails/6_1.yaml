@@ -1,0 +1,107 @@
+---
+actionpack-page_caching:
+  :first_compatible_version: 1.2.4
+active_record_extended:
+  :first_compatible_version: 2.0.3
+activerecord-import:
+  :first_compatible_version: 1.0.3
+acts_as_paranoid:
+  :first_compatible_version: 0.7.1
+administrate:
+  :first_compatible_version: 0.18.0
+airbrake:
+  :first_compatible_version: 11.0.3
+ancestry:
+  :first_compatible_version: 4.0.0
+audited:
+  :first_compatible_version: 5.0.0
+blazer:
+  :first_compatible_version: 2.4.1
+bootstrap_form:
+  :first_compatible_version: 5.0.0
+brakeman:
+  :first_compatible_version: 5.1.0
+bullet:
+  :first_compatible_version: 6.1.1
+cancancan:
+  :first_compatible_version: 3.2.0
+cypress-rails:
+  :first_compatible_version: 0.4.2
+data_migrate:
+  :first_compatible_version: 6.7.0
+ddtrace:
+  :first_compatible_version: 0.44.0
+deep_pluck:
+  :first_compatible_version: 1.1.5
+devise:
+  :first_compatible_version: 4.8.0
+enumerize:
+  :first_compatible_version: 2.4.0
+factory_bot:
+  :first_compatible_version: 6.4.5
+factory_bot_rails:
+  :first_compatible_version: 6.4.3
+formtastic:
+  :first_compatible_version: 4.0.0
+globalize:
+  :first_compatible_version: 6.2.1
+grape:
+  :first_compatible_version: 1.5.2
+groupdate:
+  :first_compatible_version: 6.0.1
+haml_coffee_assets:
+  :first_compatible_version: 1.20.0
+has_scope:
+  :first_compatible_version: 0.8.0
+honeybadger:
+  :first_compatible_version: 4.7.0
+identity_cache:
+  :first_compatible_version: 1.1.0
+kt-paperclip:
+  :first_compatible_version: 7.0.1
+lockbox:
+  :first_compatible_version: 0.6.2
+moneta:
+  :first_compatible_version: 1.6.0
+money-rails:
+  :first_compatible_version: 1.13.4
+newrelic_rpm:
+  :first_compatible_version: 6.15.0
+occams-record:
+  :first_compatible_version: 1.2.1
+packs-rails:
+  :first_compatible_version: 0.0.4
+paper_trail:
+  :first_compatible_version: 11.1.0
+parallel_tests:
+  :first_compatible_version: 3.5.1
+protected_attributes_continued:
+  :first_compatible_version: 1.8.2
+ransack:
+  :first_compatible_version: 2.4.0
+responders:
+  :first_compatible_version: 3.1.0
+rspec-rails:
+  :first_compatible_version: 4.1.0
+rubocop-rails:
+  :first_compatible_version: 2.12.3
+sequel:
+  :first_compatible_version: 5.40.0
+shoulda-matchers:
+  :first_compatible_version: 5.0.0
+simple_form:
+  :first_compatible_version: 5.1.0
+sprockets-rails:
+  :first_compatible_version: 3.2.2
+strong_migrations:
+  :first_compatible_version: 0.7.4
+temple:
+  :first_compatible_version: 0.9.0
+test-prof:
+  :first_compatible_version: 0.10.1
+validates_timeliness:
+  :first_compatible_version: 5.0.0
+view_component:
+  :first_compatible_version: 2.2.0
+web-console:
+  :first_compatible_version: 4.1.0
