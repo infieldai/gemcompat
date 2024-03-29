@@ -22,8 +22,8 @@ module Gemcompat
 
     def load_package_data!(package_name:, target_version:)
       @package_incompatibilities = YAML.load(incompatibility_datafile(package_name:, target_version:))
-                                     .map { |(name, h)| [name, Gem::Version.new(h[:first_compatible_version])] }
-                                     .to_h
+                                       .map { |(name, h)| [name, Gem::Version.new(h[:first_compatible_version])] }
+                                       .to_h
     end
 
     def report(found_incompatibilities: @found_incompatibilities)
@@ -39,8 +39,9 @@ module Gemcompat
       Bundler::LockfileParser.new(lockfile).specs.each do |spec|
         name = spec.name
         next unless required_version = package_incompatibilities[name]
+
         if required_version > spec.version
-          found_incompatibilities << { name: name, using_version: spec.version, required_version: required_version }
+          found_incompatibilities << { name:, using_version: spec.version, required_version: }
         end
       end
     end
