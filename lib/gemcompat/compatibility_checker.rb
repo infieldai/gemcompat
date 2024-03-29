@@ -8,7 +8,7 @@ module Gemcompat
     def initialize(package_name:, target_version:)
       @package_name = package_name
       @target_version = target_version
-      load_package_data!(package_name:, target_version:)
+      load_package_data!(package_name: package_name, target_version: target_version)
     end
 
     def welcome(package_name:, target_version:)
@@ -20,23 +20,24 @@ module Gemcompat
     end
 
     def incompatibility_datafile(package_name:, target_version:)
-      File.open("data/#{package_name}/#{package_version_to_path_part(target_version)}.yaml")
+      "data/#{package_name}/#{package_version_to_path_part(target_version)}.yaml"
     rescue Errno::ENOENT
       puts "#{package_name} v#{target_version} not supported yet"
       exit(1)
     end
 
     def load_package_data!(package_name:, target_version:)
-      @package_incompatibilities = YAML.load(incompatibility_datafile(package_name:, target_version:))
-                                       .map { |(name, h)| [name, Gem::Version.new(h[:first_compatible_version])] }
-                                       .to_h
+      path = incompatibility_datafile(package_name: package_name, target_version: target_version)
+      @package_incompatibilities = YAML.load_file(path).then do |data|
+        data.transform_values { |entry| Gem::Version.new(entry[:first_compatible_version]) }
+      end
     end
 
     def report(found_incompatibilities: @found_incompatibilities)
-      welcome(package_name:, target_version:)
+      welcome(package_name: package_name, target_version: target_version)
 
       if found_incompatibilities.empty?
-        puts "No incompatibilities found"
+        puts 'No incompatibilities found'
       else
         found_incompatibilities.each do |i|
           puts "#{i[:name]}: Using #{i[:using_version]}. Upgrade to #{i[:required_version]}"
@@ -47,12 +48,13 @@ module Gemcompat
     def parse_lockfile!(lockfile:)
       @found_incompatibilities = []
       Bundler::LockfileParser.new(lockfile).specs.each do |spec|
-        name = spec.name
-        next unless required_version = package_incompatibilities[name]
+        next unless (required_version = package_incompatibilities[spec.name]) && required_version > spec.version
 
-        if required_version > spec.version
-          found_incompatibilities << { name:, using_version: spec.version, required_version: }
-        end
+        found_incompatibilities << {
+          name: spec.name,
+          using_version: spec.version.to_s,
+          required_version: required_version.to_s,
+        }
       end
     end
   end
