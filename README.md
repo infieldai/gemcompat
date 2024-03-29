@@ -11,6 +11,17 @@ you're compatible with Rails 7.1 like this:
     gemcompat --package rails --target-version 7.1 --lockfile Gemfile.lock
 ```
 
+## Package support
+
+gemcompat supports checking the following upgrades:
+
+|package|target version|
+|------|-------|
+|rails|7.1|
+|rails|6.1|
+
+Please contribute to the database to support more packages and targets!
+
 ## Motivation
 Upgrading Rails means first upgrading other dependencies that block
 the way. Some of these will have explicit incompatibilities documented
