@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage = 'https://github.com/infieldai/gemcompat'
   spec.license = 'MIT'
 
-  spec.required_ruby_version = '>= 2.0'
+  spec.required_ruby_version = '>= 3.3'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -24,7 +24,5 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'rubocop'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
