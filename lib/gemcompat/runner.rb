@@ -7,7 +7,8 @@ module Gemcompat
     def run!(argv = ARGV)
       parse_args!(argv)
       checker = CompatibilityChecker.new(**options.slice(:package_name, :target_version))
-      checker.parse_lockfile(lockfile: lockfile_contents)
+      checker.parse_lockfile!(lockfile: lockfile_contents)
+      checker.report
     end
 
     def parse_args!(argv = ARGV)

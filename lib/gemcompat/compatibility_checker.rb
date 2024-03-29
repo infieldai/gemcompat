@@ -1,10 +1,11 @@
 module Gemcompat
   class CompatibilityChecker
-    attr_reader :package_incompatibilities
+    attr_reader :package_incompatibilities, :package_name, :target_version, :found_incompatibilities
 
     def initialize(package_name:, target_version:)
+      @package_name = package_name
+      @target_version = target_version
       load_package_data!(package_name:, target_version:)
-      welcome(package_name:, target_version:)
     end
 
     def welcome(package_name:, target_version:)
@@ -25,12 +26,21 @@ module Gemcompat
                                      .to_h
     end
 
-    def parse_lockfile(lockfile:)
+    def report(found_incompatibilities: @found_incompatibilities)
+      welcome(package_name:, target_version:)
+
+      found_incompatibilities.each do |i|
+        puts "#{i[:name]}: Using #{i[:using_version]}. Upgrade to #{i[:required_version]}"
+      end
+    end
+
+    def parse_lockfile!(lockfile:)
+      @found_incompatibilities = []
       Bundler::LockfileParser.new(lockfile).specs.each do |spec|
         name = spec.name
         next unless required_version = package_incompatibilities[name]
         if required_version > spec.version
-          puts "#{name}: Using #{spec.version}. Upgrade to #{required_version}"
+          found_incompatibilities << { name: name, using_version: spec.version, required_version: required_version }
         end
       end
     end
