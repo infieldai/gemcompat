@@ -2,7 +2,7 @@ RSpec.describe Gemcompat::CompatibilityChecker do
   let(:package_name) { 'rails' }
   let(:valid_target_version) { '7.1' }
 
-  subject { described_class.new(package_name:, target_version: valid_target_version) }
+  subject { described_class.new(package_name: package_name, target_version: valid_target_version) }
 
   context 'initialization' do
     it 'works' do
