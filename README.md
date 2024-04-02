@@ -1,4 +1,4 @@
-This project is maintained by the team at https://infield.ai.
+This project is maintained by the team at [Infield](https://infield.ai), you can reach us at hello@infield.ai.
 
 # What this project does
 
