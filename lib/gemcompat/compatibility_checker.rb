@@ -21,9 +21,6 @@ module Gemcompat
 
     def incompatibility_datafile(package_name:, target_version:)
       "data/#{package_name}/#{package_version_to_path_part(target_version)}.yaml"
-    rescue Errno::ENOENT
-      puts "#{package_name} v#{target_version} not supported yet"
-      exit(1)
     end
 
     def load_package_data!(package_name:, target_version:)
@@ -31,6 +28,9 @@ module Gemcompat
       @package_incompatibilities = YAML.load_file(path).then do |data|
         data.transform_values { |entry| Gem::Version.new(entry[:first_compatible_version]) }
       end
+    rescue Errno::ENOENT
+      puts "#{package_name} v#{target_version} not supported yet"
+      exit(1)
     end
 
     def report(found_incompatibilities: @found_incompatibilities)

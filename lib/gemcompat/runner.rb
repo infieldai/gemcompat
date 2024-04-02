@@ -15,8 +15,11 @@ module Gemcompat
     end
 
     # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/AbcSize
     def parse_args!(argv = ARGV)
       @options = {}
+
+      argv << '-h' if argv.empty?
       OptionParser.new do |opts|
         opts.banner = 'Usage: gemcompat --package rails --version 7.0 --lockfile ~/path/to/Gemfile.lock'
 
@@ -31,6 +34,11 @@ module Gemcompat
         opts.on('-l', '--lockfile LOCKFILE', 'Path to Gemfile.lock') do |lockfile_path|
           @options[:lockfile_path] = lockfile_path
         end
+
+        opts.on_tail('-h', '--help', 'Show this message') do
+          puts opts
+          exit
+        end
       end.parse!(argv)
 
       validate_args!
@@ -39,16 +47,21 @@ module Gemcompat
 
     private
 
+    def fail_with(msg)
+      puts msg
+      exit(1)
+    end
+
     def validate_args!
-      raise 'Must pass --package' unless options.include?(:package_name)
+      fail_with 'Must pass --package' unless options.include?(:package_name)
 
-      raise 'Must pass --target-version' unless options.include?(:target_version)
+      fail_with 'Must pass --target-version' unless options.include?(:target_version)
 
-      raise 'Must pass --lockfile' unless options.include?(:lockfile_path)
+      fail_with 'Must pass --lockfile' unless options.include?(:lockfile_path)
 
       return if lockfile_exists?
 
-      raise "#{options[:lockfile_path]} does not exist"
+      fail_with "#{options[:lockfile_path]} does not exist"
     end
 
     def lockfile_exists?
