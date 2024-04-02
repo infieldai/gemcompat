@@ -17,7 +17,7 @@ module Gemcompat
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/AbcSize
     def parse_args!(argv = ARGV)
-      @options = {}
+      @options = { lockfile_path: 'Gemfile.lock' }
 
       argv << '-h' if argv.empty?
       OptionParser.new do |opts|
@@ -44,6 +44,7 @@ module Gemcompat
       validate_args!
     end
     # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/AbcSize
 
     private
 
