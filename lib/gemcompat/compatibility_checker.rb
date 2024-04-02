@@ -4,6 +4,7 @@ module Gemcompat
   # Check a lockfile for compatibility
   class CompatibilityChecker
     attr_reader :package_incompatibilities, :package_name, :target_version, :found_incompatibilities
+    DATA_DIR = Pathname.new(__FILE__).join('../../../data')
 
     def initialize(package_name:, target_version:)
       @package_name = package_name
@@ -20,7 +21,7 @@ module Gemcompat
     end
 
     def incompatibility_datafile(package_name:, target_version:)
-      "data/#{package_name}/#{package_version_to_path_part(target_version)}.yaml"
+      DATA_DIR.join("#{package_name}/#{package_version_to_path_part(target_version)}.yaml")
     end
 
     def load_package_data!(package_name:, target_version:)
