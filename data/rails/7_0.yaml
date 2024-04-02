@@ -1,0 +1,113 @@
+---
+activerecord-import:
+  :first_compatible_version: 1.3.0
+administrate:
+  :first_compatible_version: 0.17.0
+ancestry:
+  :first_compatible_version: 4.2.0
+attr_encrypted:
+  :first_compatible_version: 4.0.0
+aws-sdk-rails:
+  :first_compatible_version: 3.6.2
+brakeman:
+  :first_compatible_version: 5.4.1
+bullet:
+  :first_compatible_version: 7.0.0
+business_time:
+  :first_compatible_version: 0.12.0
+composite_primary_keys:
+  :first_compatible_version: 14.0.4
+config:
+  :first_compatible_version: 5.1.0
+data_migrate:
+  :first_compatible_version: 8.0.0
+ddtrace:
+  :first_compatible_version: 1.14.0
+deep_pluck:
+  :first_compatible_version: 1.3.1
+delayed_job:
+  :first_compatible_version: 4.1.11
+deprecation_toolkit:
+  :first_compatible_version: 2.0.0
+devise:
+  :first_compatible_version: 4.9.0
+doorkeeper:
+  :first_compatible_version: 5.5.3
+elasticsearch-rails:
+  :first_compatible_version: 7.2.0
+enumerize:
+  :first_compatible_version: 2.5.0
+flipper-ui:
+  :first_compatible_version: 0.23.0
+goldiloader:
+  :first_compatible_version: 4.2.0
+grape:
+  :first_compatible_version: 1.6.1
+graphql-batch:
+  :first_compatible_version: 0.5.0
+groupdate:
+  :first_compatible_version: 5.2.3
+has_scope:
+  :first_compatible_version: 0.8.1
+honeybadger:
+  :first_compatible_version: 5.0.0
+i18n:
+  :first_compatible_version: 1.9.0
+i18n-tasks:
+  :first_compatible_version: 0.9.36
+identity_cache:
+  :first_compatible_version: 1.1.0
+kaminari:
+  :first_compatible_version: 1.2.2
+kt-paperclip:
+  :first_compatible_version: 7.1.0
+newrelic_rpm:
+  :first_compatible_version: 8.4.0
+otr-activerecord:
+  :first_compatible_version: 2.1.1
+paper_trail:
+  :first_compatible_version: 15.0.0
+parallel_tests:
+  :first_compatible_version: 3.8.0
+pghero:
+  :first_compatible_version: 2.8.2
+public_activity:
+  :first_compatible_version: 2.0.0
+rabl:
+  :first_compatible_version: 0.15.0
+rails-i18n:
+  :first_compatible_version: 7.0.2
+rails-settings-cached:
+  :first_compatible_version: 2.8.2
+ransack:
+  :first_compatible_version: 2.5.0
+responders:
+  :first_compatible_version: 3.1.0
+rspec-rails:
+  :first_compatible_version: 6.0.0
+scenic:
+  :first_compatible_version: 1.5.5
+sequel:
+  :first_compatible_version: 5.52.0
+shakapacker:
+  :first_compatible_version: 6.4.0
+shoryuken:
+  :first_compatible_version: 6.1.0
+shoulda-matchers:
+  :first_compatible_version: 5.2.0
+simple_form:
+  :first_compatible_version: 5.2.0
+sitemap_generator:
+  :first_compatible_version: 6.2.0
+stripe_event:
+  :first_compatible_version: 2.4.0
+strong_migrations:
+  :first_compatible_version: 0.8.0
+turbo-rails:
+  :first_compatible_version: 1.5.0
+view_component:
+  :first_compatible_version: 2.49.0
+wicked_pdf:
+  :first_compatible_version: 2.6.0
+will_paginate:
+  :first_compatible_version: 4.0.0
