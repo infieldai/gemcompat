@@ -18,6 +18,7 @@ gemcompat supports checking the following upgrades:
 |package|target version|
 |------|-------|
 |rails|7.1|
+|rails|7.0|
 |rails|6.1|
 
 Please contribute to the database to support more packages and targets!
