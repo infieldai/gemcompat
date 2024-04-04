@@ -58,6 +58,11 @@ automatically check your project against the database.
 We welcome contributions, both to the dataset and to the code itself.
 
 ## Adding an incompatibility
+
+Please let us know if you come across an incompatibility that we don't
+have in the dataset. You can open a Github issue describing the
+incompatibility and we'll add it, or you can open a PR directly.
+
 Incompatibilities are stored in the `data/` directory, with one folder
 per package and one file per target version of that package.
 
