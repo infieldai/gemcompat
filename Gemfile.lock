@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gemcompat (0.2.0)
+    gemcompat (0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -58,4 +58,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   2.3.22
+   2.4.22
