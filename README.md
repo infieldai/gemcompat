@@ -76,7 +76,7 @@ version 1.5.0 in order to be compatible with Rails 7.1
 
 ## Development
 
-Getting started should be easy. You'll need to have Ruby 3.3 installed
+Getting started should be easy. You'll need to have Ruby 2.7+ installed
 and run bundle to install the developer dependencies. You can run specs with:
 
 ```
