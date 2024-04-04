@@ -1,8 +1,8 @@
-This project is maintained by the team at [Infield](https://infield.ai), you can reach us at hello@infield.ai.
+This project is maintained by the team at [Infield](https://infield.ai), you can reach us at founders@infield.ai.
 
 # What this project does
 
-## TLDR
+## TLDR :shushing_face::gem:
 Use this script to check whether your app relies on gems which are
 silently incompatible with a package upgrade. For example, check if
 you're compatible with Rails 7.1 like this:
