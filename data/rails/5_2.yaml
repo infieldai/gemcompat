@@ -52,8 +52,8 @@ ddtrace:
   note: "Rails 5.2 support"
   source: "changelog"
 dalli:
-  :first_compatible_version: 2.7.8
-  note: "Rails 5.2 compatibility"
+  :first_compatible_version: 2.7.9
+  note: "Fix behavior for Rails 5.2+ cache_versioning (GriwMF)"
   source: "changelog"
 bullet:
   :first_compatible_version: 5.7.0
