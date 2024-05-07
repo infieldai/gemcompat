@@ -1,0 +1,105 @@
+---
+geocoder:
+  :first_compatible_version: 1.4.6
+  note: "Update for Rails 5.2 compatibility"
+  source: "changelog"
+acts-as-taggable-on:
+  :first_compatible_version: 6.0.0
+  note: "Support Rails 5.2"
+  source: "changelog"
+inherited_resources:
+  :first_compatible_version: 1.9.0
+  note: "Support Rails 5.2.1"
+  source: "changelog"
+blind_index:
+  :first_compatible_version: 0.1.1
+  note: "Added support for ActiveRecord 5.2"
+  source: "changelog"
+friendly_id:
+  :first_compatible_version: 5.2.4
+  note: "Fix compatibility with Rails versions 4.0 -> 5.2"
+  source: "changelog"
+composite_primary_keys:
+  :first_compatible_version: 11.1.0
+  note: "Support ActiveRecord 5.2.1"
+  source: "changelog"
+active_record_upsert:
+  :first_compatible_version: 0.8.0
+  note: "Support Rails 5.2"
+  source: "changelog"
+ransack:
+  :first_compatible_version: 1.8.7
+  note: "Rails 5.2 support"
+  source: "changelog"
+ancestry:
+  :first_compatible_version: 3.0.2
+  note: "added Rails 5.2 support (thx @jjuliano)"
+  source: "changelog"
+protected_attributes_continued:
+  :first_compatible_version: 1.4.0
+  note: "Add Rails 5.2 support"
+  source: "changelog"
+dotenv:
+  :first_compatible_version: 2.2.2
+  note: "Support Rails 5.2"
+  source: "changelog"
+stripe_event:
+  :first_compatible_version: 2.1.1
+  note: "Adds better support for Rails 5.2"
+  source: "changelog"
+ddtrace:
+  :first_compatible_version: 0.15.0
+  note: "Rails 5.2 support"
+  source: "changelog"
+dalli:
+  :first_compatible_version: 2.7.9
+  note: "Fix behavior for Rails 5.2+ cache_versioning (GriwMF)"
+  source: "changelog"
+bullet:
+  :first_compatible_version: 5.7.0
+  note: "Support rails 5.2"
+  source: "changelog"
+enumerize:
+  :first_compatible_version: 2.2.0
+  note: "Support ActiveModel::Attributes from Rails 5.2"
+  source: "changelog"
+data_migrate:
+  :first_compatible_version: 4.0.0
+  note: "Support for Rails 5.2"
+  source: "changelog"
+public_activity:
+  :first_compatible_version: 1.6.0
+  note: "Add support for Rails 5.2"
+  source: "changelog"
+figaro:
+  :first_compatible_version: 1.2.0
+  note: "Add support for Rails 5.2 and 6.0"
+  source: "changelog"
+shopify_api:
+  :first_compatible_version: 5.0.0
+  note: "Fixed session handling support for Rails 5.2.1"
+  source: "changelog"
+react-rails:
+  :first_compatible_version: 2.4.5
+  note: "Explicitly support Rails 5.2"
+  source: "changelog"
+cancancan:
+  :first_compatible_version: 2.2.0
+  note: "Support Rails 5.2"
+  source: "changelog"
+active_record_upsert:
+  :first_compatible_version: 0.7.4
+  note: "#56 Rails 5.2 compatibility - thank you, Benedikt Deicke!"
+  source: "changelog"
+activerecord-nulldb-adapter:
+  :first_compatible_version: 0.3.7
+  note: "Adds support for ActiveRecord 5.1/5.2"
+  source: "changelog"
+ancestry:
+  :first_compatible_version: 3.0.3
+  note: "This branch (3.x) should still be compatible with rails 3 and 4. Rails 5.1 and 5.2 support were introduced in this version, but ongoing support has been moved to ancestry 4.0"
+  source: "changelog"
+parallel_tests:
+  :first_compatible_version: 4.5.1
+  note: "Rails 5.2 and gherkin fixes"
+  source: "changelog"
