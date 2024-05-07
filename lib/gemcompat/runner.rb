@@ -21,7 +21,7 @@ module Gemcompat
 
       argv << '-h' if argv.empty?
       OptionParser.new do |opts|
-        opts.banner = 'Usage: gemcompat --package rails --version 7.0 --lockfile ~/path/to/Gemfile.lock'
+        opts.banner = 'Usage: gemcompat --package rails --target-version 7.0 --lockfile ~/path/to/Gemfile.lock'
 
         opts.on('-p', '--package PACKAGE_NAME', 'Package to check compatibility for') do |pkg|
           @options[:package_name] = pkg
