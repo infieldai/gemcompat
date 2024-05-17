@@ -21,6 +21,7 @@ gemcompat supports checking the following upgrades:
 |rails|7.0|
 |rails|6.1|
 |rails|5.2|
+|rails|5.0|
 
 Please contribute to the database to support more packages and targets!
 
