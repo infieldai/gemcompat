@@ -65,10 +65,6 @@ bullet:
   :first_compatible_version: 5.8.0
   note: Fix through reflection for rails 5.x
   source: changelog
-cancancan:
-  :first_compatible_version: 3.0.0
-  note: Removed automatic eager loading of associations for ActiveRecord >= 5.0.
-  source: changelog
 ckeditor:
   :first_compatible_version: 4.2.0
   note: Rails 5 support
@@ -137,10 +133,6 @@ faker:
 flipper-ui:
   :first_compatible_version: 0.7.5
   note: support for rails 5 beta/ rack 2 alpha
-  source: changelog
-formtastic:
-  :first_compatible_version: 4.0.0
-  note: Added support for Rails 5 Attributes API
   source: changelog
 friendly_id:
   :first_compatible_version: 5.2.4
