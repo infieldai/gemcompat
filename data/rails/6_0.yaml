@@ -1,0 +1,83 @@
+---
+activerecord-import:
+  :first_compatible_version: 1.0.2
+  note: Add support for ActiveRecord 6.0.0.rc1
+  source: changelog
+activerecord-nulldb-adapter:
+  :first_compatible_version: 0.4.0
+  note: Add support for ActiveRecord 6.0
+  source: changelog
+acts_as_list:
+  :first_compatible_version: 1.0.0
+  note: Added support for Rails 6.0 in testing
+  source: changelog
+administrate:
+  :first_compatible_version: 0.19.0
+  note: Fix Rails 6.0 `load_server` incompatibility
+  source: changelog
+after_commit_everywhere:
+  :first_compatible_version: 0.1.4
+  note: ActiveRecord 6.0 compatibility
+  source: changelog
+bootstrap_form:
+  :first_compatible_version: 4.3.0
+  note: Support Rails 6.0.0, Small documentation changes
+  source: changelog
+brakeman:
+  :first_compatible_version: 5.1.0
+  note: Update SQL injection check for Rails 6.0/6.1
+  source: changelog
+bullet:
+  :first_compatible_version: 6.0.0
+  note: Support Rails 6.0
+  source: changelog
+cancancan:
+  :first_compatible_version: 3.0.0
+  note: Add support for Rails 6.0.
+  source: changelog
+ddtrace:
+  :first_compatible_version: 0.28.0
+  note: Support for Rails 6.0
+  source: changelog
+deep_pluck:
+  :first_compatible_version: 1.1.2
+  note: Support Rails 6.0
+  source: changelog
+dotenv:
+  :first_compatible_version: 2.7.0
+  note: Add Support for Rails 6.0
+  source: changelog
+figaro:
+  :first_compatible_version: 1.2.0
+  note: Add support for Rails 5.2 and 6.0
+  source: changelog
+formtastic:
+  :first_compatible_version: 4.0.0
+  note: Support for Rails 6.0 has been added
+  source: changelog
+goldiloader:
+  :first_compatible_version: 3.1.1
+  note: Fix to support Rails 6.0 beta 3.
+  source: changelog
+haml_coffee_assets:
+  :first_compatible_version: 1.20.0
+  note: Add support for Rails 6.0 and 6.1 and Sprockets 4
+  source: changelog
+packs-rails:
+  :first_compatible_version: 0.0.4
+  note: Docs/fix for rails 6.0
+  source: changelog
+protected_attributes_continued:
+  :first_compatible_version: 1.8.2
+  note: Fix for Rails 6.0.x where CollectionAssociation defines its own implementation
+    of build_record
+  source: changelog
+rubocop-rails:
+  :first_compatible_version: 2.15.2
+  note: Fix a false positive for `Rails/DeprecatedActiveModelErrorsMethods` when using
+    `keys` method with Rails 6.0
+  source: changelog
+tapioca:
+  :first_compatible_version: 0.10.5
+  note: Support Rails 6.0 which has no `SignedId` class defined
+  source: changelog
