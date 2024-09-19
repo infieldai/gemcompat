@@ -1,0 +1,81 @@
+---
+activerecord-import:
+  :first_compatible_version: 1.8.1
+  note: "Further update for ActiveRecord 7.2 compatibility when running validations"
+  source: "changelog"
+blazer:
+  :first_compatible_version: 3.0.4
+  note: "Fixed error with Trilogy and Rails 7.2"
+  source: "changelog"
+bullet:
+  :first_compatible_version: 7.2.0
+  note: "Support rails 7.2"
+  source: "changelog"
+database_cleaner-active_record:
+  :first_compatible_version: 2.2.0
+  note: "Support Rails 7.2+"
+  source: "changelog"
+deep_pluck:
+  :first_compatible_version: 1.3.2
+  note: "Support Ruby 3.2 and Rails 7.2 (@khiav223577)"
+  source: "changelog"
+delayed_job:
+  :first_compatible_version: 4.1.12
+  note: "Fix rails 7.2 ActiveSupport::ProxyObject deprecation"
+  source: "changelog"
+deprecation_toolkit:
+  :first_compatible_version: 2.2.1
+  note: "Fix support for Active Support 7.2 without Rails"
+  source: "changelog"
+factory_bot:
+  :first_compatible_version: 6.5.0
+  note: "Ensure rails 7.2 compatibility"
+  source: "changelog"
+good_job:
+  :first_compatible_version: 4.2.0
+  note: "Add appraisal for Rails 7.2; bracket lowest PG version instead of enumerating all"
+  source: "changelog"
+grape:
+  :first_compatible_version: 2.2.0
+  note: "Add Rails 7.2 in CI workflow"
+  source: "changelog"
+identity_cache:
+  :first_compatible_version: 1.6.1
+  note: "Fix deprecation warnings on Active Record 7.2."
+  source: "changelog"
+inherited_resources:
+  :first_compatible_version: 2.0.0
+  note: "Test against Rails 7.2"
+  source: "changelog"
+lockbox:
+  :first_compatible_version: 1.4.0
+  note: "Added support for Active Record 7.2"
+  source: "changelog"
+oj:
+  :first_compatible_version: 3.16.6
+  note: "Fixed issue with Rails 7.2 that changed the order of calls to to_json and as_json"
+  source: "changelog"
+paper_trail:
+  :first_compatible_version: 15.2.0
+  note: "Rails 7.2"
+  source: "changelog"
+ransack:
+  :first_compatible_version: 4.2.0
+  note: "Add Rails 7.2 support by @robinator and @gregmolnar"
+  source: "changelog"
+rspec-rails:
+  :first_compatible_version: 7.0.0
+  note: "Change default driver for system specs on Rails 7.2 to match its default"
+  source: "changelog"
+shoulda-matchers:
+  :first_compatible_version: 6.4.0
+  note: "Add Rails 7.2 compatibility by @theodorton"
+  source: "changelog"
+tapioca:
+  :first_compatible_version: 0.11.10
+  note: "Fix engine loading for Rails 7.2 by @vinistock in https://github.com/Shopify/tapioca/pull/1702"
+  source: "changelog"
+view_component:
+  :first_compatible_version: 3.14.0
+  note: "Add support for Rails 7.2."
+  source: "changelog"
