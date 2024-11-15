@@ -1,0 +1,45 @@
+---
+sprockets-rails:
+  :first_compatible_version: 3.5.2
+  note: "Fix deprecations with Rails 8.0 by @rafaelfranca"
+  source: "changelog"
+
+brakeman:
+  :first_compatible_version: 6.2.0
+  note: "Add initial Rails 8 support"
+  source: "changelog"
+
+groupdate:
+  :first_compatible_version: 6.5.0
+  note: "Added support for Active Record 8"
+  source: "changelog"
+
+good_job:
+  :first_compatible_version: 4.4.1
+  note: "Clean up appraisals, add rails 8, use postgres 17"
+  source: "changelog"
+
+bullet:
+  :first_compatible_version: 8.0.0
+  note: "Support Rails 8"
+  source: "changelog"
+
+paper_trail:
+  :first_compatible_version: 16.0.0
+  note: "Rails 8.0"
+  source: "changelog"
+
+graphiql-rails:
+  :first_compatible_version: 1.10.1
+  note: "Update `routes.rb` for Rails 8 compatibility"
+  source: "changelog"
+
+rails-settings-cached:
+  :first_compatible_version: 2.9.5
+  note: "Add test for Rails 8.0 by @huacnlee"
+  source: "changelog"
+
+strong_migrations:
+  :first_compatible_version: 2.0.2
+  note: "Fixed migrations not running with Active Record 8 rc2"
+  source: "changelog"
